@@ -1,15 +1,18 @@
 import data from '../data/data.json' with { type: 'json' };
 const container = document.getElementById('dashboard');
-
+/*
+<img src="../../images/icon-${(item.title).toLowerCase()}.svg" alt="" class="background-img"/>
+<img src="../../images/icon-ellipsis.svg" alt="More options" width="16" class="options"/>
+*/
 const appendItem = (item) => {
     container.innerHTML += `
   <section class="${(item.title).toLowerCase()} card">
           <div class="background layout background-${item.background}">
-            <img src="../../images/icon-${(item.title).toLowerCase()}.svg" alt="" class="background-img"/>
+            <img src="/images/icon-${(item.title).toLowerCase()}.svg" alt="" class="background-img"/>
           </div>
           <div class="layout">
             <p class="medium-text">${item.title}</p>
-            <img src="../../images/icon-ellipsis.svg" alt="More options" width="16" class="options"/>
+            <img src="/images/icon-ellipsis.svg" alt="More options" width="16" class="options"/>
           </div>
           <div class="layout hours">
             <p  class="big-text daily hidden">${item.timeframes.daily.current}hrs</p>
